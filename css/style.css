@@ -1,0 +1,120 @@
+@font-face {
+  font-family: vazir;
+  src: url("../fonts/vazir/Vazir.ttf"), url(../fonts/vazir/Vazir.eot),
+    url(../fonts/vazir/Vazir.woff);
+}
+* {
+  outline: none !important;
+}
+body {
+  direction: rtl;
+  background: #3d73dd;
+  font-family: vazir !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #a6afbd;
+  text-decoration: none !important;
+}
+/*====================
+    Started Mega Menu
+======================*/
+.megaMenu {
+  margin: 25px 0;
+  position: relative;
+}
+
+.megaMenu > ul {
+  display: flex;
+  position: relative;
+  height: 85px;
+  background: #0e2045;
+  margin: 50px;
+  border: none;
+  border-radius: 25px;
+}
+
+.megaMenu ul li a {
+  display: inline-block;
+  padding: 15px 10px;
+  margin-top: 10px;
+  color: #a6afbd;
+  transition: all 0.3s;
+}
+
+.megaMenu > ul > li > a:hover {
+  color: #ff5c5c;
+  border-bottom: 3px solid #ff5c5c;
+}
+
+.megaMenu > ul > li::after {
+  content: "";
+  height: 50px;
+  display: block;
+}
+
+.megaMenu > ul > li > ul {
+  position: absolute;
+  background: #0e2045;
+  width: 95%;
+  min-height: 300px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  top: 150px;
+  right: -150px;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.8s;
+  padding: 10px;
+  z-index: 999;
+}
+
+.megaMenu > ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  top: 100px;
+  right: 30px;
+}
+
+.megaMenu > ul > li > ul > li {
+  width: 18%;
+  font-size: 15px;
+  font-weight: 500;
+}
+.megaMenu > ul > li > ul > li > a:hover {
+  color: #ff5c5c;
+  border-bottom: 1px solid #ff5c5c;
+}
+
+.megaMenu > ul > li > ul > li > ul {
+  font-weight: normal;
+  padding-right: 20px;
+}
+.megaMenu > ul > li > ul > li > ul > li > a:hover {
+  color: #ff5c5c;
+}
+/* started the small menu styles */
+.megaMenu ul.smallMenu {
+  background: #0e2045;
+  width: 20%;
+  min-height: 200px;
+  flex-direction: column;
+  right: auto !important;
+}
+
+.megaMenu ul.smallMenu > li {
+  width: 100%;
+  font-weight: normal;
+}
+.megaMenu ul.smallMenu > li > a {
+  color: #a6afbd;
+}
+
+/* 
+@CodeWithMaster💜
+ */
